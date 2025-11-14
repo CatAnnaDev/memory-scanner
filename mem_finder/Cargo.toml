@@ -1,0 +1,7 @@
+[package]
+name = "mem_finder"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+memory_scanner_lib = { path = "memory_scanner_lib"}
