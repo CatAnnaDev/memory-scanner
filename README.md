@@ -13,7 +13,7 @@ Une bibliothèque Rust multi-plateforme pour scanner la mémoire des processus e
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/votre-username/memory-scanner.git
+git clone https://github.com/CatAnnaDev/memory-scanner.git
 cd memory-scanner
 cargo build --release
 ```
@@ -23,13 +23,13 @@ cargo build --release
 **Windows uniquement :**
 ```toml
 [target.'cfg(windows)'.dependencies]
-winapi = { version = "0.3", features = ["winnt", "memoryapi", "processthreadsapi", "handleapi"] }
+winapi = { version = "0.3.9", features = ["winnt", "memoryapi", "processthreadsapi", "handleapi"] }
 ```
 
 **Unix (Linux/macOS) :**
 ```toml
 [target.'cfg(unix)'.dependencies]
-libc = "0.2"
+libc = "1.0.0-alpha.1"
 ```
 
 ## 🚀 Utilisation
@@ -155,6 +155,8 @@ Si vous ne voulez pas modifier SIP, vous pouvez signer l'application :
     <key>com.apple.security.cs.debugger</key>
     <true/>
     <key>com.apple.security.get-task-allow</key>
+    <true/>
+    <key>com.apple.security.cs.allow-unsigned-executable-memory</key>
     <true/>
 </dict>
 </plist>
